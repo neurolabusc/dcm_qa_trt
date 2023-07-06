@@ -1,34 +1,12 @@
 ## About
 
-dcm_qa_uih is a simple DICOM to NIfTI validator script and dataset. This repository is similar to [dcm_qa](https://github.com/neurolabusc/dcm_qa), but includes data from [United Imaging Healthcare ("UIH")](https://www.united-imaging.com/en/home/) MRI scanners.
+dcm_qa_trt is a simple DICOM to NIfTI validator script and dataset. This repository is similar to [dcm_qa](https://github.com/neurolabusc/dcm_qa), but is designed to validate the `TotalReadoutTime` for [GE](https://github.com/rordenlab/dcm2niix/tree/master/GE) MRI scanners.
 
-## License
+## Details
 
-This software and images are open source and were acquired by Shan C Young of United Imaging Healthcare. The the code is covered by the [2-clause BSD license](https://opensource.org/licenses/BSD-2-Clause).
-
-## Versions
-
-2-October-2018
- - Initial public release
-
-## Running
-
-Assuming that the executable dcm2niix is in your path, you should be able to simply run the script `batch.sh` from the terminal.
-
-If you have problems you can edit the first few lines of the `batch.sh` script so that `basedir` reports the explicit location of the `dcm_qa` folder (by default this is assumed to be the folder containing the script) on your computer and `exenam` reports the explicit location of dcm2niix (by default it is assumed to be in your path). Also, make sure the script is executable (`chmod +x batch.sh`). Then run the script.
-
-## Updating dcm_qa_uih
-
-This software reports when there are any changes in behavior of the software. However, some of these changes might be improvements. For example, software which supports future BIDS tags will report differences relative to the prior solutions reported in dcm_qa_nih. Once the solutions have been verified as correct, one needs to update both dcm_qa_nih and the software that invokes dcm_qa_nih. For example, with dcm2niix we can update it to use the latest version of dcm_qa with this script:
-
-```
-cd dcm2niix
-git submodule update --remote
-git commit -am 'Update dcm_qa_uih submodule.'
-git push
-```
+The BIDS definition of [TotalReadoutTime](https://bids-specification.readthedocs.io/en/stable/glossary.html#totalreadouttime-metadata) is not intuitive, and it is **not** the actual, physical duration of the readout train. BIDS adopted the [FSL's TOPUP](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/topup/TopupUsersGuide) definition. It is worth emphasizing the TOPUP guide notes: `If your readout time is identical for all acquisitions you don't neccessarily have to specify a valid value in this column (you can e.g. just set it to 1), but if you do specify correct values the estimated field will be correctly scaled in Hz, which may be a useful sanity check.` The [dcm2niix GE notes](https://github.com/rordenlab/dcm2niix/tree/master/GE) describes how the formula is implemented by dcm2niix, and Matlab code is provided in this repository.
 
 ## Useful Links
 
- - dcm2niix's handling of these files is described [here](https://github.com/rordenlab/dcm2niix/tree/master/UIH).
- - Discussion of the current features of this format are described [here](https://github.com/rordenlab/dcm2niix/issues/225).
+ - dcm2niix's GE `TotalReadoutTime` formula to handle details like interpolation with [v1.0.20230609](https://github.com/rordenlab/dcm2niix/pull/725).
+
