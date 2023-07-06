@@ -1,0 +1,18 @@
+# (0008,0080) LO [GEHC]                                   #   4, 1 InstitutionName 
+# (0008,1090) LO [SIGNA Premier]                          #  14, 1 ManufacturersModelName 
+# (0043,1062) SH [21]                                     #   2, 1 Unknown Tag & Data (maybe the exam number - not always)
+
+Exam	Series	Modal	                                       Description	Nslices	Nphases	Rows	Col	TE		TR		RunNo	EESP	AcqMat
+21	02	   MR	                           EPI mph hb6 acc1 interp	540	10	128	128	27.000000	1000.000000	95744	580	80\0\0\80
+21	03	   MR	                         EPI mph hb6 acc1 nointerp	540	10	80	80	27.000000	1000.000000	96256	580	80\0\0\80
+21	04	   MR	                           EPI mph hb3 acc2 interp	540	10	128	128	15.200000	2000.000000	96768	568	80\0\0\80
+21	05	   MR	                         EPI mph hb3 acc2 nointerp	540	10	80	80	15.200000	2000.000000	97280	568	80\0\0\80
+21	06	   MR	                           EPI mph hb2 acc3 interp	540	10	128	128	11.700000	2000.000000	97792	564	80\0\0\80
+21	07	   MR	                         EPI mph hb2 acc3 nointerp	540	10	80	80	11.700000	2000.000000	98304	564	80\0\0\80
+21	08	   MR	                               EPI mph acc1 interp	540	10	128	128	29.300000	2000.000000	99328	572	80\0\0\80
+21	09	   MR	                             EPI mph acc1 nointerp	540	10	80	80	29.300000	2000.000000	00000	572	80\0\0\80
+21	10	   MR	                             EPI mph acc1 interpPF	540	10	128	128	17.800000	2000.000000	00512	572	80\0\0\80
+21	11	   MR	                             EPI mph acc1 interpPF	540	10	80	80	17.800000	2000.000000	01024	572	80\0\0\80
+21	12	   MR	                             EPI mph acc2 interpPF	540	10	128	128	17.600000	2000.000000	01536	560	80\0\0\80
+21	14	   MR	                             EPI mph acc3 interpPF	540	10	128	128	14.200000	2000.000000	02560	560	80\0\0\80
+21	15	   MR	                             EPI mph acc3 interpPF	540	10	128	128	14.200000	2000.000000	03072	560	80\0\0\80
