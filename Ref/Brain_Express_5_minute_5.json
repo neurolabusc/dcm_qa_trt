@@ -42,6 +42,9 @@
 	"AcquisitionMatrixPE": 80,
 	"ReconMatrixPE": 80,
 	"ParallelReductionFactorInPlane": 2,
+	"EchoSpacingMicroSecondsGE": 568,
+	"NotPhysicalNumberOfAcquiredPELinesGE": 40,
+	"NotPhysicalTotalReadOutTimeGE": 0.022152,
 	"EffectiveEchoSpacing": 0.000280405,
 	"TotalReadoutTime": 0.022152,
 	"PixelBandwidth": 6250,
@@ -110,5 +113,5 @@
 		0	],
 	"InPlanePhaseEncodingDirectionDICOM": "COL",
 	"ConversionSoftware": "dcm2niix",
-	"ConversionSoftwareVersion": "v1.0.20230411"
+	"ConversionSoftwareVersion": "v1.0.20230706"
 }
